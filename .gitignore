@@ -366,3 +366,5 @@ project.lock.json
 /tutorial/rs/target
 /tutorial/rs/Cargo.lock
 /ylwrap
+lib/java/target
+.settings
