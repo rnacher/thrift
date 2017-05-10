@@ -5332,7 +5332,7 @@ void t_java_generator::generate_java_struct_tryload_scheme(ofstream& out,
                                                            t_struct* tstruct,
                                                            bool is_result) {
   indent(out) << "private static class " << tstruct->get_name()
-              << "TryloadSchemeFactory implements SchemeFactory {" << endl;
+              << "TryloadSchemeFactory implements org.apache.thrift.scheme.SchemeFactory {" << endl;
   indent_up();
   indent(out) << "public " << tstruct->get_name() << "TryloadScheme getScheme() {" << endl;
   indent_up();
@@ -5343,7 +5343,7 @@ void t_java_generator::generate_java_struct_tryload_scheme(ofstream& out,
   indent(out) << "}" << endl << endl;
 
   out << indent() << "private static class " << tstruct->get_name()
-      << "TryloadScheme extends StandardScheme<" << tstruct->get_name() << "> {" << endl << endl;
+      << "TryloadScheme extends org.apache.thrift.scheme.StandardScheme<" << tstruct->get_name() << "> {" << endl << endl;
   indent_up();
   generate_standard_reader(out, tstruct);
   indent_down();
