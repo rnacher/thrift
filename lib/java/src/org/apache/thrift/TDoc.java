@@ -8,9 +8,11 @@ import static java.lang.annotation.ElementType.TYPE;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
+import java.lang.annotation.Inherited;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target({TYPE, FIELD, PARAMETER, METHOD})
+@Inherited
 public @interface TDoc {
 	String name() default "";
 	String value() default "";
